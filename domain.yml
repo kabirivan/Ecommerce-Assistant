@@ -32,22 +32,22 @@ slots:
     values:
       - niña
       - niño
-    influence_conversation: true
+    influence_conversation: false
   size:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   color:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   category:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   comparator:
     type: text
-    influence_conversation: true
+    influence_conversation: false
   price:
     type: float
-    influence_conversation: true
+    influence_conversation: false
   name: 
     type: text
     influence_conversation: false

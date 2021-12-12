@@ -28,7 +28,7 @@ ALLOWED_COLORS_BOYS_BUSOS = ["azul", "plomo", "negro", 'beige', 'celeste','amari
 ALLOWED_CLOTHES_BOYS = ["busos", "camisetas", "polos", "pantalones"]
 
 ALLOWED_GENDERS = ["niños", "niño", "niñas", "niña"]
-fb_access_token = "EAAGhOLXucnEBADenP8nD2It2YuxHvtLkJtb09UyAc0Jiau8tZA8qKA7rkxFxNsh3ZC7dRS8Uxo7xMCzhREOdFPs26sZBLka1k9x4ic6tSsMyu86WJIHsebSHNGNxKkfOAQrJ6C6bB7BdRGbHamZCFMCveIjNY44c77MiFVr2CzLVnvgb5CDSZCjgRMZAaw8tZBuzDQ5NvHBhQZDZD"
+fb_access_token = "EAAGhOLXucnEBANZAkiSUZALRto5Sa95HvIbPcjWs9VMsH14C10ifUI6vhC608GRl0fYNjBXw1BRF45VGQQHfFJ6ELUE1ESfZASguNtaiADZA0MnmtV2b3h3u9PV3sGqNZB8rhka7mIguSqtJya9sM6mXBcdtWe2a3WReRYn2U2aOGZB9VzZBSiJ1nK1nlbZBvDBckx1gTLNZC5wZDZD"
 
 CLOTHES_GIRLS = [
     {

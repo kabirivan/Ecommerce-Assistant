@@ -3,6 +3,7 @@
 
 
 # This is a simple example for a custom action which utters "Hello World!"
+import os
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.events import FormValidation, SlotSet, EventType
@@ -28,7 +29,7 @@ ALLOWED_COLORS_BOYS_BUSOS = ["azul", "plomo", "negro", 'beige', 'celeste','amari
 ALLOWED_CLOTHES_BOYS = ["busos", "camisetas", "polos", "pantalones"]
 
 ALLOWED_GENDERS = ["niños", "niño", "niñas", "niña"]
-fb_access_token = "EAAGhOLXucnEBAP6zwdjGrAvbQkZBjWmmoDwxcrZCGtOm7EPH4KK0e0JujgU1gw5KE4VSC5QkRoWGNnZAoNZAZBs5QE6OAXZBetXHSwTm7daM6GWUbWfXBC6K3JxRt6J8JXx01LC1KayvMVv9njZCLkfkoTMgorAIDQStECZASBp9jbD3ZAmmUfYx0jZAZAhCeULVvKjpiWHvSxBrgZDZD"
+fb_access_token = os.getenv('FACEBOOK_PAGE_ACCESS_TOKEN')
 
 CLOTHES_GIRLS = [
     {

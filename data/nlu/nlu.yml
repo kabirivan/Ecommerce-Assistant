@@ -201,7 +201,7 @@ nlu:
     - muestrame ropa de color [verde](color)
     - muestrame ropa de color [morado](color)
     - quiero [busos](category) de color [rojo](color)
-    - quiero [blusas](category) de color [rojo](rosado)
+    - quiero [blusas](category) de color [rojo](color)
     - quiero ropa de color [fucsia](color)
     - quiero ropa de color [lila](color)
     - quiero ropa de color [negro](color)

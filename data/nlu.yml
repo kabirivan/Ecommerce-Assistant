@@ -52,7 +52,6 @@ nlu:
     - conversar con una persona real
     - quiero una persona
     - dejame hablar con una persona real
-
 - intent: faq/sizing_clarification
   examples: |
     - tallas
@@ -461,15 +460,12 @@ nlu:
     - [verde](color)
     - [celeste](color)
     - [beige](color)
-  
 - intent: who_am_i
   examples: |
     - quien soy yo
     - dime quien soy yo
     - yo soy
     - quien soy
-
-
 - synonym: menor
   examples: |
     - tengo

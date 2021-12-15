@@ -37,6 +37,9 @@ poetry install
 rasa train
 ```
 
+
+
+
 ## Development
 
 ### Activate ngrok to serve on https
@@ -48,16 +51,24 @@ Run on console the following command. It will expose 5005 local port on internet
 ```
 
 ### Start project
+Start action server and Duckling
+
+```
+docker-compose -f docker-compose-dev.yml up
+```
+
 Run on console the following command. It will start project on port 5005
 ```
 poetry shell
 rasa shell
 rasa run --enable-api --cors "*"
+rasa interactive
 ```
 
-poetry run python myscript.py
-
-poetry run production
+## Production
+```
+docker-compose up
+```
 
 ## Extras
 - [Rasa API](https://rasa.com/docs/rasa/pages/http-apihttp:// "Rasa API")

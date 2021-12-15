@@ -101,11 +101,11 @@ services:
     expose:
       - "5002"
     volumes:
-      - ./config.yml:/app/config.yml
+      - ./config.production.yml:/app/config.yml
       - ./models:/app/models
       - ./environments.yml:/app/environments.yml
-      - ./credentials.yml:/app/credentials.yml
-      - ./endpoints.yml:/app/endpoints.yml
+      - ./credentials.production.yml:/app/credentials.yml
+      - ./endpoints.production.yml:/app/endpoints.yml
       - ./logs:/logs
       - ./auth:/app/auth
     environment:
@@ -210,6 +210,17 @@ services:
       - "8000"
     command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
 
+  redis:
+    container_name: redis
+    restart: always
+    image: "bitnami/redis:${REDIS_VERSION}"
+    logging:
+      driver: none
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+    expose:
+      - "6379"
+
   nginx:
     restart: always
     logging:
@@ -229,17 +240,6 @@ services:
       - rasa-x
       - rasa-production
       - action-server
-
-  redis:
-    container_name: redis
-    restart: always
-    image: "bitnami/redis:${REDIS_VERSION}"
-    logging:
-      driver: none
-    environment:
-      REDIS_PASSWORD: ${REDIS_PASSWORD}
-    expose:
-      - "6379"
 
   # traefik:
   #   image: "traefik:latest"

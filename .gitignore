@@ -109,3 +109,6 @@ db
 .config
 auth
 credentials
+
+#rasa folder
+models

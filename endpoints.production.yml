@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
- url: "http://localhost:5055/webhook"
+ url: "http://action-server:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -33,12 +33,42 @@ action_endpoint:
 #     username: postgres # username used for authentication
 #     password: ivan # password used for authentication
 
-#tracker_store:
-#    type: mongod
-#    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
-#    db: <name of the db within your mongo instance, e.g. rasa>
-#    username: <username used for authentication>
-#    password: <password used for authentication>
+models:
+   url: ${RASA_MODEL_SERVER}
+   token: ${RASA_X_TOKEN}
+   wait_time_between_pulls: ${RASA_MODEL_PULL_INTERVAL}
+
+tracker_store:
+   type: sql
+   dialect: postgresql
+   url: ${DB_HOST}
+   username: ${DB_USER}
+   password: ${DB_PASSWORD}
+   db: ${DB_DATABASE}
+   login_db: ${DB_LOGIN_DB}
+   
+lock_store:
+   type: "redis"
+   url: ${REDIS_HOST}
+   port: ${REDIS_PORT}
+   password: ${REDIS_PASSWORD}
+   db: ${REDIS_DB}
+
+cache:
+   type: "redis"
+   url: ${REDIS_HOST}
+   port: ${REDIS_PORT}
+   password: ${REDIS_PASSWORD}
+   db: ${REDIS_CACHE_DB}
+   key_prefix: "rasax_cache"
+
+event_broker:
+   type: "pika"
+   url: ${RABBITMQ_HOST}
+   username: ${RABBITMQ_USERNAME}
+   password: ${RABBITMQ_PASSWORD}
+   queues:
+   - ${RABBITMQ_QUEUE}
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers

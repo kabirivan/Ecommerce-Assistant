@@ -17,8 +17,6 @@ nlu:
     - conversar con una persona real
     - quiero una persona
     - dejame hablar con una persona real
-
-
 - intent: out_of_scope
   examples: |
     - todo esta bien?
@@ -36,7 +34,6 @@ nlu:
     - blah blah blah
     - cuanto es 5 + 5
     - cual es la raiz cuadrada de 25
-
 - intent: request_clothes
   examples: |
     - quiero comprar ropa
@@ -225,14 +222,12 @@ nlu:
     - [verde](color)
     - [celeste](color)
     - [beige](color)
-  
 - intent: who_am_i
   examples: |
     - quien soy yo
     - dime quien soy yo
     - yo soy
     - quien soy
-
 - synonym: menor
   examples: |
     - tengo

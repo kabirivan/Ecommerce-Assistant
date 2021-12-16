@@ -17,8 +17,6 @@ nlu:
     - conversar con una persona real
     - quiero una persona
     - dejame hablar con una persona real
-
-
 - intent: out_of_scope
   examples: |
     - todo esta bien?
@@ -36,7 +34,6 @@ nlu:
     - blah blah blah
     - cuanto es 5 + 5
     - cual es la raiz cuadrada de 25
-
 - intent: request_clothes
   examples: |
     - quiero comprar ropa
@@ -161,6 +158,9 @@ nlu:
     - 5
     - 7
     - 1
+    - [busos](category)
+    - [nino]{"entity": "gender", "value": "ni\u00f1o"}
+    - quiero ropa
 - intent: request_clothes_price
   examples: |
     - quiero comprar ropa que cueste [menos](comparator) de 25 dolares
@@ -225,14 +225,14 @@ nlu:
     - [verde](color)
     - [celeste](color)
     - [beige](color)
-  
+    - [rosado](color)
+    - [rojo](color)
 - intent: who_am_i
   examples: |
     - quien soy yo
     - dime quien soy yo
     - yo soy
     - quien soy
-
 - synonym: menor
   examples: |
     - tengo

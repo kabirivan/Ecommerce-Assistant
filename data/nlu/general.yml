@@ -15,6 +15,12 @@ nlu:
     - hola bot
     - saludo
     - hola robot
+    - hello
+    - holi
+    - hi
+    - HOLA
+    - hol
+    - HOla
 - intent: affirm
   examples: |
     - si
@@ -52,7 +58,6 @@ nlu:
     - chao chao
     - chao, cuidate
     - nos vemos mañana
-
 - intent: stop
   examples: |
     - tu no puedes ayudarme

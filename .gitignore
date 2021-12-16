@@ -111,5 +111,5 @@ auth
 credentials
 
 #rasa folder
-models
+#models
 .keras

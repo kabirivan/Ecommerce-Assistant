@@ -6,7 +6,7 @@ authors = ["Ivan Aguas <aguas.xavier2013a@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.7,<3.9"
-rasa = "2.8.14"
+rasa = {extras = ["full"], version = "^2.8.14"}
 spacy = "^3.2.1"
 algoliasearch = "^2.6.1"
 

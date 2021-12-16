@@ -159,7 +159,6 @@ class ActionHelloWorld(Action):
             text="Hola {}! Soy Jasmine 👩🏻‍🦰, en que te puedo ayudar?".format(first_name)
         )
         message = {
-            "attachment": {
                 "type": "template",
                 "payload": {
                     "template_type": "button",
@@ -178,9 +177,8 @@ class ActionHelloWorld(Action):
                     ],
                 },
             }
-        }
 
-        dispatcher.utter_message(json_message=message)
+        dispatcher.utter_message(attachment=message)
         return [SlotSet('name', first_name)]
 
 class ActionGiveFirstName(Action):
